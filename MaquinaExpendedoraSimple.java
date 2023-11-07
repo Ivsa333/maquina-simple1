@@ -60,7 +60,7 @@ public class MaquinaExpendedoraSimple {
      * Devuelve la cantidad de dinero que el cliente actual lleva introducida
      */
     public int getTotalDineroAcumulado() {
-        totalDineroAcumulado = 0;
+        totalDineroAcumulado = balanceClienteActual - totalDineroAcumulado;
         return totalDineroAcumulado;
     }
     
