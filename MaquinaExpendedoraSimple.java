@@ -36,7 +36,12 @@ public class MaquinaExpendedoraSimple {
         estacionOrigen = "León";
         estacionDestino = estacionDelDestino;
     }
-    
+    /**
+     * Elegir el precio del billete
+     */
+    public void setPrecioBillete(int nuevoPrecioBillete) {
+        this.precioBillete = nuevoPrecioBillete;
+    }
     /**
      * Devuelve el precio del billete
      */
