@@ -48,14 +48,22 @@ public class MaquinaExpendedoraSimple {
     public int getBalanceClienteActual() {
         return balanceClienteActual;
     }
-
+    
     /**
      * Simula la introduccion de dinero por parte del cliente actual
      */
     public void introducirDinero(int cantidadIntroducida) {
         balanceClienteActual = balanceClienteActual + cantidadIntroducida;
     }
-
+   
+    /**
+     * Devuelve la cantidad de dinero que el cliente actual lleva introducida
+     */
+    public int getTotalDineroAcumulado() {
+        totalDineroAcumulado = balanceClienteActual - precioBillete;
+        return totalDineroAcumulado;
+    }
+    
     /**
      * Imprime un billete para el cliente actual
      */
@@ -65,6 +73,7 @@ public class MaquinaExpendedoraSimple {
         System.out.println("# Billete de tren:");
         System.out.println("# De " + estacionOrigen + " a " + estacionDestino);
         System.out.println("# " + precioBillete + " euros.");
+        System.out.println("#" + totalDineroAcumulado);
         System.out.println("##################");
         System.out.println();
 
