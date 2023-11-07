@@ -62,7 +62,6 @@ public class MaquinaExpendedoraSimple {
      * Devuelve la cantidad de dinero que el cliente actual lleva introducida
      */
     public int getTotalDineroAcumulado() {
-        totalDineroAcumulado = balanceClienteActual - precioBillete;
         return totalDineroAcumulado;
     }
     
@@ -75,7 +74,6 @@ public class MaquinaExpendedoraSimple {
         System.out.println("# Billete de tren:");
         System.out.println("# De " + estacionOrigen + " a " + estacionDestino);
         System.out.println("# " + precioBillete + " euros.");
-        System.out.println("#" + totalDineroAcumulado);
         System.out.println("##################");
         System.out.println();
 
