@@ -23,6 +23,7 @@ public class MaquinaExpendedoraSimple {
         estacionOrigen = "León";
         estacionDestino = "Oviedo";
     }
+    
      /**
      * Crea una maquina expendedora de billetes de tren con el 
      * precio del billete y el origen y destino dados. Se asume que el precio
@@ -35,6 +36,7 @@ public class MaquinaExpendedoraSimple {
         estacionOrigen = "León";
         estacionDestino = estacionDelDestino;
     }
+    
     /**
      * Devuelve el precio del billete
      */
@@ -60,7 +62,7 @@ public class MaquinaExpendedoraSimple {
      * Devuelve la cantidad de dinero que el cliente actual lleva introducida
      */
     public int getTotalDineroAcumulado() {
-        totalDineroAcumulado = balanceClienteActual - totalDineroAcumulado;
+        totalDineroAcumulado = balanceClienteActual - precioBillete;
         return totalDineroAcumulado;
     }
     
