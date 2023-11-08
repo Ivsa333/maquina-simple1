@@ -6,6 +6,8 @@ public class MaquinaExpendedoraSimple {
     private int balanceClienteActual;
     // El total de dinero almacenado en la maquina desde su ultimo vaciado
     private int totalDineroAcumulado;
+    // Reduce el precio del billete
+    private int reducirPrecioBillete;
     // El origen del billete
     private String estacionOrigen;
     // El destino del billete
@@ -36,16 +38,19 @@ public class MaquinaExpendedoraSimple {
         estacionOrigen = "León";
         estacionDestino = estacionDelDestino;
     }
+    
     /**
      * Elegir el precio del billete
      */
     public void setPrecioBillete(int nuevoPrecioBillete) {
         this.precioBillete = nuevoPrecioBillete;
     }
+    
     /**
      * Devuelve el precio del billete
      */
     public int getPrecioBillete() {
+        precioBillete = precioBillete - reducirPrecioBillete;
         return precioBillete;
     }
 
@@ -54,6 +59,13 @@ public class MaquinaExpendedoraSimple {
      */
     public int getBalanceClienteActual() {
         return balanceClienteActual;
+    }
+    
+    /**
+     * Elegir el precio del billete
+     */
+    public void setReducirPrecioBillete(int nuevoReducirPrecioBillete) {
+        this.reducirPrecioBillete = nuevoReducirPrecioBillete;
     }
     
     /**
