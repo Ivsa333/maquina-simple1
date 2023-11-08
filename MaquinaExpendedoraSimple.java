@@ -24,6 +24,7 @@ public class MaquinaExpendedoraSimple {
         totalDineroAcumulado = 0;
         estacionOrigen = "León";
         estacionDestino = "Oviedo";
+        reducirPrecioBillete = 0;
     }
     
      /**
@@ -37,6 +38,7 @@ public class MaquinaExpendedoraSimple {
         totalDineroAcumulado = 0;
         estacionOrigen = "León";
         estacionDestino = estacionDelDestino;
+        reducirPrecioBillete = 0;
     }
     
     /**
@@ -50,7 +52,6 @@ public class MaquinaExpendedoraSimple {
      * Devuelve el precio del billete
      */
     public int getPrecioBillete() {
-        precioBillete = precioBillete - reducirPrecioBillete;
         return precioBillete;
     }
 
@@ -62,10 +63,17 @@ public class MaquinaExpendedoraSimple {
     }
     
     /**
-     * Elegir el precio del billete
+     * Devuelve la cantidad de dinero que el cliente actual lleva introducida
      */
-    public void setReducirPrecioBillete(int nuevoReducirPrecioBillete) {
-        this.reducirPrecioBillete = nuevoReducirPrecioBillete;
+    public int reducirPrecioBillete() {
+        return reducirPrecioBillete;
+    }
+    
+    /**
+     * Reducir el precio del billete
+     */
+    public void ReducirPrecioBillete(int nuevoReducirPrecioBillete) {
+        precioBillete = precioBillete - nuevoReducirPrecioBillete;
     }
     
     /**
